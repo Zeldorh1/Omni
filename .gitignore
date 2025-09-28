@@ -1,0 +1,30 @@
+# Node / Expo
+node_modules/
+.expo/
+.expo-shared/
+.expo/*
+.cache/
+dist/
+build/
+web-build/
+android/
+ios/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Editors / OS
+.DS_Store
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# EAS local artifacts / secrets
+.eas/*
+*.jks
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
