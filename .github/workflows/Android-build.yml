@@ -1,0 +1,26 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch: # This allows you to trigger the build manually
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Expo CLI
+        run: npm install -g eas-cli
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Android APK
+        run: eas build -p android --profile preview --local
