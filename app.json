@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "OmniTintAI",
-    "slug": "omnitintai",
+    "name": "Omni",
+    "slug": "omni",
     "version": "1.0.0",
     "orientation": "portrait",
     "platforms": [
@@ -22,7 +22,7 @@
       "**/*"
     ],
     "android": {
-      "package": "com.omnitintai.app"
+      "package": "com.omni.app"
     },
     "extra": {
       "eas": {
