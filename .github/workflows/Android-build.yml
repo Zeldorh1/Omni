@@ -1,11 +1,12 @@
 name: Build Android APK
 
 on:
-  workflow_dispatch: # Allows manual trigger
+  workflow_dispatch: # Allows you to trigger the build manually
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -24,6 +25,4 @@ jobs:
       - name: Build Android APK
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: |
-          eas whoami || true
-          eas build -p android --profile preview --non-interactive
+        run: eas build -p android --profile preview --non-interactive
